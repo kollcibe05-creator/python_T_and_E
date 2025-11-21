@@ -55,14 +55,14 @@ jane = Student("jane", 16)
 jane.teacher = murioki
 
 kamau.teacher = murioki
-print(kamau.teacher.name)
+# print(kamau.teacher.name)
 # murioki.add_student(kamau)
 
 # print(kamau.teacher.name)
-print(murioki.students())
+# print(murioki.students())
 
-for student in murioki.students():
-    print(student.name)
+# for student in murioki.students():
+#     print(student.name)
 
 
 # print(Kamau.teacher)
@@ -70,3 +70,80 @@ for student in murioki.students():
 # Murioki.add_student("Kamau")
 
 # print(Murioki.students)
+
+
+class Car:
+    def __init__(self, engine):
+        self.engine = engine
+
+class Engine:
+    def __init__(self, cylinders, fuelType):
+        self.cylinders = cylinders
+        self.fuelType = fuelType   
+
+
+four_cylinder_engine = Engine(4, "Diesel")
+mazda = Car(four_cylinder_engine)
+
+# print(mazda.engine.cylinders)
+# print(mazda.engine.fuelType)
+
+
+class CPU:
+    def __init__(self, cpu_type):
+        self.cpu_type = cpu_type
+
+class Computer:
+    def __init__(self, cpu_type):
+        self.CPU = CPU(cpu_type)
+
+
+# cpu_ios = CPU("cpu_ios")  
+
+# print(cpu_ios.cpu_type)
+
+Hp = Computer("cpu_ios")
+
+# print(dir(CPU))
+
+class Parent:
+    all = []
+    def __init__(self,name, children="None"):
+        self.name = name
+        self._children = []
+        if children:
+            for child in children:
+                self.add_child(child)
+        Parent.all.append(self) 
+    def children(self):
+        return self._children
+    def add_child(self, child):
+        if isinstance(child, Child):
+            self._children.append(child)
+        else:
+            raise ValueError("Child must be an instance of the Child class.")
+
+class Child:
+    def __init__(self, name):
+        self.name = name
+    def parents(self):
+        return [parent for parent in Parent.all if self in  parent.children()]
+    def add_parent(self, parent):
+        if isinstance(parent, Parent):
+            parent.add_child(self)
+        else:
+            raise ValueError("Parent must be an instance of the Parent Class.") 
+
+# parent1 = Parent("Morgan")
+# parent2 = Parent("Tate") 
+# child1 = Child("Morty")
+# child2 = Child("Dora") 
+
+# parent1.add_child(child1)
+# parent2.add_child(child)
+# child2.add_parent(parent1)
+# child2.add_parent(parent2)
+
+
+# [print(c.name) for c in parent1.children()]
+
