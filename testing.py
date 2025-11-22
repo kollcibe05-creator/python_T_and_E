@@ -60,6 +60,8 @@ sum_1 = myfunc(60)
 
 
 
+# print(str.__dir__)
+
 
 
     
