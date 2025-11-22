@@ -23,3 +23,9 @@ print(Student.student_list)
 
 for student in Student.student_list:
     print(student.first_name, student.second_name)
+
+list_ = [1,0,5,8,9,1,6,5,7,6,11,14,1,0,1,4,14]
+print(list_)
+
+set_list = set(list_)    # set ~ unique ~ curly braces  ## tuple ~ duplicated ~ randomized
+print(set_list)
