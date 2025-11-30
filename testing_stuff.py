@@ -19,4 +19,13 @@ odd_remove_even = [160, 3, 1719, 19, 11, 13, -21] #--> 160 (the only even number
 def find_outlier(integers):
     pass
 
-# print(find_outlier(even_remove_odd))    
+# print(find_outlier(even_remove_odd))   
+
+
+a = [1,2,3]
+b = [1,2,3]
+
+if a is b:
+    print("same")
+else:
+    print("different")    
