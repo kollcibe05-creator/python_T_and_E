@@ -1,22 +1,22 @@
-class MyArray:
-    def __init__(self):
-        self.dictionary = {}
-        self.length = 0
+# class MyArray:
+#     def __init__(self):
+#         self.dictionary = {}
+#         self.length = 0
 
-    def push(self, value):
-        self.dictionary[self.length] = value
-        self.length += 1
-    def pop(self):
-        if self.length == 0:
-            return None
-        self.length -= 1
-        return self.dictionary.pop(self.length)          
-    pass
+#     def push(self, value):
+#         self.dictionary[self.length] = value
+#         self.length += 1
+#     def pop(self):
+#         if self.length == 0:
+#             return None
+#         self.length -= 1
+#         return self.dictionary.pop(self.length)          
+#     pass
 
-arr = MyArray()   
+# arr = MyArray()   
 
-arr.push(1)
-arr.push(2)
+# arr.push(1)
+# arr.push(2)
 
 # print(arr.dictionary)
 # print(arr.length)
@@ -50,13 +50,20 @@ list_ = [1, 2, 2, 3,3, 4, 4, 4, 4]
 # print(first_repeated_value(list_))    
 
 
-list_1 = ["Collins", "Kibet", "Collo"]
+# list_1 = ["Collins", "Kibet", "Collo", "Collins"]
+
+list_1 = [2,2,2, 3]
 
 dic = {}
-for i in len(list_1):
-    dic[list_1[i]] = list_1.get(list[i], 0) + 1
+for name  in list_1:
+    dic[name] = dic.get(name, 0) + 1
 
-print(dic)    
+for key, value in dic.items():
+    if value == 1:
+        print(key)
+
+
+print(dic)
 
 
 
