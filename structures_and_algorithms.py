@@ -38,15 +38,25 @@ list_ = [1, 2, 2, 3,3, 4, 4, 4, 4]
 
 # print(first_repeated_value(list_))
 
-def first_repeated_value(list):
-    list_set = set()
+# def first_repeated_value(list):
+#     list_set = set()
 
-    for i in range (0, len(list)):
-        if list[i] in list_set:
-            return list[i]
-        list_set.add(list[i])
-    return None    
+#     for i in range (0, len(list)):
+#         if list[i] in list_set:
+#             return list[i]
+#         list_set.add(list[i])
+#     return None    
 
-print(first_repeated_value(list_))    
+# print(first_repeated_value(list_))    
+
+
+list_1 = ["Collins", "Kibet", "Collo"]
+
+dic = {}
+for i in len(list_1):
+    dic[list_1[i]] = list_1.get(list[i], 0) + 1
+
+print(dic)    
+
 
 
