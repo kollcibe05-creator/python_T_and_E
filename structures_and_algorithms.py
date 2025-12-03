@@ -18,9 +18,35 @@ arr = MyArray()
 arr.push(1)
 arr.push(2)
 
-print(arr.dictionary)
-print(arr.length)
+# print(arr.dictionary)
+# print(arr.length)
 
-print(arr.pop())
+# print(arr.pop())
+
+
+
+
+#####First Dupicate value
+list_ = [1, 2, 2, 3,3, 4, 4, 4, 4]
+ 
+# def first_repeated_value(list):
+#     for i in range(0, len(list)):
+#         for j in range(i+ 1, len(list)):
+#             if list[i] == list[j]:
+#                 return list[i]
+#     return None    
+
+# print(first_repeated_value(list_))
+
+def first_repeated_value(list):
+    list_set = set()
+
+    for i in range (0, len(list)):
+        if list[i] in list_set:
+            return list[i]
+        list_set.add(list[i])
+    return None    
+
+print(first_repeated_value(list_))    
 
 
