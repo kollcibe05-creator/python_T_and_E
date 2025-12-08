@@ -27,7 +27,7 @@
 
 
 #####First Dupicate value
-list_ = [1, 2, 2, 3,3, 4, 4, 4, 4]
+# list_ = [1, 2, 2, 3,3, 4, 4, 4, 4]
  
 # def first_repeated_value(list):
 #     for i in range(0, len(list)):
@@ -47,23 +47,42 @@ list_ = [1, 2, 2, 3,3, 4, 4, 4, 4]
 #         list_set.add(list[i])
 #     return None    
 
-# print(first_repeated_value(list_))    
+# # print(first_repeated_value(list_))    
 
 
-# list_1 = ["Collins", "Kibet", "Collo", "Collins"]
+# # list_1 = ["Collins", "Kibet", "Collo", "Collins"]
 
-list_1 = [2,2,2, 3]
+# list_1 = [2,2,2, 3]
 
-dic = {}
-for name  in list_1:
-    dic[name] = dic.get(name, 0) + 1
+# # dic = {}
+# # for name  in list_1:
+# #     dic[name] = dic.get(name, 0) + 1
 
-for key, value in dic.items():
-    if value == 1:
-        print(key)
-
-
-print(dic)
+# # for key, value in dic.items():
+# #     if value == 1:
+# #         print(key)
 
 
+# # print(dic)
 
+
+# stringified = (list_1).split(" ")
+
+# print(stringified)
+
+
+
+
+#stack
+
+def reverse_string(string):
+    stack = []
+
+    for char in string:
+        stack.append(char)
+    reversed = ""
+    while stack:
+        reversed += stack.pop()
+    return reversed   
+
+print(reverse_string("Collo"))
