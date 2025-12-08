@@ -85,4 +85,39 @@ def reverse_string(string):
         reversed += stack.pop()
     return reversed   
 
-print(reverse_string("Collo"))
+# print(reverse_string("Collo"))
+
+# def evaluate_keystrokes(string):
+#     i = len(string) - 1
+#     result = ""
+#     skip = 0
+
+#     while i>= 0:
+#         if string[i] == "<":
+#             skip += 1
+#             i -= 1
+#         else:
+#             if skip > 0:
+#                 i -= skip
+#                 skip = 0
+#             else:
+#                 result = string[i] + result        
+#     return result
+
+
+# print(evaluate_keystrokes("abcd<<<fg<h"))
+
+def evaluate_keystrokes(string):
+    stack = []
+    for char in string:
+        if char == "<":
+            if len(stack) != 0:
+                stack.pop()
+        else:
+            stack.append(char) 
+    result = ''
+    while stack:
+        result = stack.pop() + result
+    return result
+    
+print(evaluate_keystrokes("abcd<<<fg<h"))    
