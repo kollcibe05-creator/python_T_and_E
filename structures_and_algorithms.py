@@ -165,3 +165,25 @@ def DoublyLinkedList:
         node.prev_node = self.tail
         self.tail.next_node = node
         self.tail = node        
+
+
+# Tree
+class Tree:
+    def __init__(self, root):
+        self.root = None
+
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.children = children
+
+# #   BST ~ binary search tree   #or in our use case a BinaryTree
+# class BinaryTree:
+#     def __init__(self, root):
+#         self.root = None
+
+# class Node:
+#     def __init__(self, value):
+#         self.value = value
+#         self.left_child = None
+#         self.right_child = right_child    
