@@ -142,8 +142,26 @@ class LinkedList:
             last_node = last_node.next_node
         last_node.next_node = node
 
-# To build our linked lists,,,,,
+# To build our singly linked lists,,,,,
 list_ = LinkedList()
 list_.append(Node("Bulldog"))
 list_.append(Node("Chihuahua"))
 list_.append(Node("German Shepherd"))
+
+
+
+## Doubly linked lists
+
+
+## The other class isn't affected
+def DoublyLinkedList:
+    def __init__(self, head= None, tail = None):
+        self.head = head
+        self.tail = tail
+    def append(self, Node):
+        if self.head == None:
+            self.head = head
+            self.tail = node
+        node.prev_node = self.tail
+        self.tail.next_node = node
+        self.tail = node        
