@@ -120,4 +120,30 @@ def evaluate_keystrokes(string):
         result = stack.pop() + result
     return result
     
-print(evaluate_keystrokes("abcd<<<fg<h"))    
+# print(evaluate_keystrokes("abcd<<<fg<h"))
+
+
+# singly linked data structure
+
+class Node:
+    def __init__(self, data, next_node = None):
+        self.data = data
+        self.next_node = next_node
+
+class LinkedList:
+    def __init__(self, head = None):
+        self.head = head    
+    def append(self,node):
+        if self.head == None:
+            self.head = node 
+            return
+        last_node = self.head  
+        while last_node.next_node:
+            last_node = last_node.next_node
+        last_node.next_node = node
+
+# To build our linked lists,,,,,
+list_ = LinkedList()
+list_.append(Node("Bulldog"))
+list_.append(Node("Chihuahua"))
+list_.append(Node("German Shepherd"))
