@@ -35,6 +35,16 @@ sum_1 = myfunc(60)
 
 
 
+list_ = [0,1,2,3,4,5,6,7,8,9]
+
+print(list_[::-1])
+
+reversed_name = list(reversed('Collo'))
+name = "Collo"
+print(reversed_name == list(name[::-1]))
+
+
+
 
 
 #reversing a string##################
