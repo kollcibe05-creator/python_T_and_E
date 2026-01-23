@@ -29,3 +29,8 @@ if a is b:
     print("same")
 else:
     print("different")    
+
+
+
+def test():
+    print("Hello")
